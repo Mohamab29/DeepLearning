@@ -1,7 +1,7 @@
 #DeepLearning
 
 in the course of deep learning we learned the basics of deep learning and learned different algorithms  Which are CNN ,  RNN , LSTM , NN for find the sentence most similar to given query  and more
-In the four files You see in this repository there are 4 scripts which include:
+In the four files You see in this repository there are 4 scripts and a text file which include :
 
 1-preprocessing.py :
  this script includes preprocessing and visualizing English sentences and
@@ -33,3 +33,28 @@ the script pipeline :
 - Test: image ->preprocess image -> CNN -> get word vector of a label -> find 3 most relevant text labels  
 
 in order to use this script a person needs the word2vec .vec file from google and the 100-cifar dataset.
+
+4-image_headline.py
+
+in this script we built an LSTM model that generates a headline for a given image
+we train or use trained models from the pervious two scripts mentioned above (similarity and image classification) in order to predict and headline for a given image first by outputting a query that consists of three words which we then feed to the second model the finds the most similar sentence to that query .
+
+the pipeline in the script :
+- Training pipeline:
+trains two networks:
+N1 - image classification network that produces a word describing an image from lab 3.
+N2 - an LSTM network that predicts the next word given a word.
+
+- Test pipeline: 
+image -> image headline
+we use N1 to produce a word W1 for given image, then we use N1 to produce two more words W2,W3 to build a headline.
+W2 is prediction by N2 given W1, and W3 is prediction by N2 given W2.
+N4 produces word vectors, in order to print words, we find which word it is by using WV dictionary (word2vec) and cosine similarity.
+and then use network N3 from similarty.py to find the sentence that matches our 3 keywords from N2, and print it as an alternative headline.
+
+In order to run this script we need these datasets :
+the word2vec .vec file from google and the 100-cifar dataset and the bbc news dataset.
+
+PS:
+
+In order to run scripts from 2 to 4 you need to run them in the terminal in the same working dirctory with all the datasets there and enter the arguments found in the text file
