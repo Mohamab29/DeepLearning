@@ -1,4 +1,5 @@
 #DeepLearning
+
 in the course of deep learning we learned the basics of deep learning and learned different algorithms  Which are CNN ,  RNN , LSTM , NN for find the sentence most similar to given query  and more
 In the four files You see in this repository there are 4 scripts which include:
 
@@ -21,3 +22,14 @@ give a new query after preprocessing to the trained dataset -> predict a sentenc
 PS:
 the words were encoded in two ways one is by using Word2vec and second is 1-hot encoding ,
 .vec is needed to run this script and the BBC news dataset or something similar .
+
+3-image_classification.py :
+
+in this script we built an RNN model that takes as an input an image and produces label .
+the dataset that is used in order to train this model is the 100-cifar data and the labels were produced by outputting a vector and then this vector was compared to other vectors in word2vec dataset and then choosing the top 3 most fitting words.
+
+the script pipeline :
+- Training: CIFAR-100 dataset and its labels -> CNN -> classification model
+- Test: image ->preprocess image -> CNN -> get word vector of a label -> find 3 most relevant text labels  
+
+in order to use this script a person needs the word2vec .vec file from google and the 100-cifar dataset.
