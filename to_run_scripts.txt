@@ -1,14 +1,14 @@
-lab2:
+similarity.py:
 python similarity.py --task train --data BBC_dataset.csv --representation w2v
 python similarity.py --task train --data BBC_dataset.csv --representation n-hot
 python similarity.py --task test --query query_test.txt --text sentence_test.txt --representation n-hot --model final_model_n-hot.h5
 python similarity.py --task test --query query_test.txt --text sentence_test.txt --representation w2v --model final_model_w2v.h5
 
-lab3:
+image_classification.py:
 python image_classification.py --task test --model image_model.h5 --image truck.png
 python image_classification.py --task train
 
-lab4:
+image_headline.py:
 
 python image_headline.py --task train --wordvec wiki_data.vec
 python image_headline.py --task test --wordvec wiki_data.vec --model4 text_model.h5 --model3 image_model.h5 --image car.png
