@@ -43,7 +43,6 @@ parser.add_argument('--wordvec', type=str, metavar='<word vectors file>',
                     help='wordvec: path of FastText wv file (*.vec)')
 args = parser.parse_args()
 
-
 def calculate_time(start_time):
     """
     calculates the time from start to current time and returns it in secedes
