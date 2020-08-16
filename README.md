@@ -53,7 +53,7 @@ N4 produces word vectors, in order to print words, we find which word it is by u
 and then use network N3 from similarty.py to find the sentence that matches our 3 keywords from N2, and print it as an alternative headline.
 
 In order to run this script we need these datasets :
-the word2vec .vec file from google and the 100-cifar dataset and the bbc news dataset.
+the word2vec .vec file from google and the 100-cifar dataset and the bbc news dataset which is found at https://www.kaggle.com/shineucc/bbc-news-dataset.
 
 PS:
 
